@@ -40,29 +40,18 @@ string[] CutArrayByChar(string[] array, int charcut)
     // печать массива PrintArray не будет печатать пустой строчный элемент, 
     // но размер массива нового не будет соответствовать реальному количествую новых элементов.
 
-
     string[] newArray = new string[j];
     for (int i = 0; i < j; i++)
     {
         newArray[i]=tempArray[i];
-        Console.WriteLine(i);
     }
     return newArray;
 }
 
 
-
-
 Console.WriteLine("Задайте эл-ты массива через пробел");
-string[] txt = Console.ReadLine().Split(' ').ToArray();
+string[] strArray = Console.ReadLine().Split(' ').ToArray();
 
-
-string[] newTxt = CutArrayByChar(txt, 3);
-PrintArray(newTxt);
-Console.WriteLine(newTxt.Length);
-
-
-// // 4 5 6 8 9 5
-// int[] numsArr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-
-// Console.WriteLine(string.Join(' ', numsArr));
+string[] newStrArray= CutArrayByChar(strArray, 3);
+Console.WriteLine();
+PrintArray(newStrArray);
